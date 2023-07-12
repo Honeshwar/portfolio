@@ -1,0 +1,80 @@
+@import url('./style.css');
+
+
+/* navbar color or position modified*/
+.navbar{
+    background-image: linear-gradient(to right,#E5E5E5,#ddcfcf);
+}
+.navbar ul{
+    float: right;
+}
+
+
+/* blog container styling */
+#main-content{
+    width: 700px;
+    margin: auto;
+}
+#main-content-heading{
+    padding:70px 0 0px;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 60px;
+    /* or 136% */
+    color: #21243D;
+}
+.blog-post-container{
+    padding: 30px 0 10px;
+    border-bottom: 2px solid rgb(207, 203, 203);
+
+   
+}
+.blog-post-heading{
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 44px;
+    color: #21243D;
+}
+
+/* media queries for blog container */
+@media screen and (max-width:700px) {
+   #main-content{
+        width: 400px;
+        margin: auto;
+    }
+}
+
+
+/*  blog container styling 
+#blog{
+    width: 700px;
+    margin: auto;
+}
+#blog-heading{
+    padding:70px 0 0px;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 60px;
+    /* or 136% 
+    color: #21243D;
+}
+.blog-post-container{
+    padding: 30px 0 10px;
+    border-bottom: 2px solid rgb(207, 203, 203);
+
+   
+}
+.blog-post-heading{
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 44px;
+    color: #21243D;
+} */
