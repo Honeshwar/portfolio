@@ -80,30 +80,39 @@ setAttributes(viewLess,{
 });
 
 
-viewLess.onclick=vMore;
-viewAll.onclick=vMore;
-let v=false;
-function vMore(e) {
+viewLess.onclick = viewMore;
+viewAll.onclick = viewMore;
+let view=false;
+function viewMore(e) {
 
-    if(v){
-        v=false;//unview
-        destroyCP();
+    if(view){
+        view=false;//unview
+        destroyCreatedPosts();
 
         arrow.classList.remove('fa-arrow-left');
         arrow.classList.add('fa-arrow-right');
     }else{
-        v=true;
-        cPosts();
+        view=true;
+        createPosts();
         arrow.classList.remove('fa-arrow-right');
         arrow.classList.add('fa-arrow-left');
     }
 }
+const postsData = [
+    {
+        postHeading:"Something about project",
+        createdAt:"12 Dec 2022",
+        skills:"html, css, javascript",
+        postMessage:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatibus quibusdam tempore fuga. Ipsam nam veritatis dignissimos accusantium exercitationem ipsa sed illo et aliquam? Sed est nemo libero deserunt reprehenderit."
+    },
+]
 
-function cPosts(e) {
+function createPosts(e) {
 
     for (let i = 0; i < 5; i++) {
         const element = document.createElement('article')
-        element.innerHTML='<h2 class="post-heading" >Making a design system from scratch</h2><p class="post-time-and-title">12 Feb 2020 <span class="separator">|</span> Design Pattern</p><p class="post-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatibus quibusdam tempore fuga. Ipsam nam veritatis dignissimos accusantium exercitationem ipsa sed illo et aliquam? Sed est nemo libero deserunt reprehenderit.</p>';
+        element.innerHTML=`<h2 class="post-heading" >${postsData[0].postHeading}</h2><p class="post-time-and-title">${postsData[0].createdAt} <span class="separator">|</span> ${postsData[0].skills}</p>
+        <p class="post-about">${postsData[0].postMessage}</p>`;
         element.setAttribute('class',`post-items viewed-all ${i}`);
 
         posts.append(element);
@@ -113,7 +122,7 @@ function cPosts(e) {
     posts.appendChild(viewLess);
 }
 
-function destroyCP(e) {
+function destroyCreatedPosts(e) {
 
     const viewed_all_created_element = document.getElementsByClassName('viewed-all');
     // for (let i = 0; i < viewed_all_created_element.length; i++) {
