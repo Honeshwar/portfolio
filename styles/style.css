@@ -468,10 +468,10 @@ color: #8695A4;
     padding-left: 0;
     /* margin-right: 10px; */
 }
-span:nth-child(1).skills-required{background-color: #FF6464;box-shadow: inset 0 0 2px 2px rgb(190, 81, 81);}
+/* span:nth-child(1).skills-required{background-color: #FF6464;box-shadow: inset 0 0 2px 2px rgb(190, 81, 81);}
 span:nth-child(2).skills-required{background-color: #64acff;box-shadow: inset 0 0 2px 2px #497cb8;}
 span:nth-child(3).skills-required{background-color: #ffdd64;box-shadow: inset 0 0 2px 2px #b59d47;}
-span:nth-child(4).skills-required{ background: #0a59f8;box-shadow: inset 0 0 2px 2px  #073289}
+span:nth-child(4).skills-required{ background: #0a59f8;box-shadow: inset 0 0 2px 2px  #073289} */
 
 .skills-icon{
     width:40px;
