@@ -1,3 +1,23 @@
+ <section id="skills">
+           <article>
+            <h2 class="section-heading"><img style="width: 40px;" src="https://cdn-icons-png.flaticon.com/128/4739/4739048.png">Skills  </h2>
+            <div id="skills-badges-container">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/919/919827.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/919/919826.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/919/919851.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/8297/8297437.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/919/919827.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/919/919826.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/919/919851.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/8297/8297437.png" alt="skill icon">
+                <img class="skills-badges" src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="skill icon">
+            </div>
+           </article>
+</section>
+
 *{
     padding:0;
     margin:0;
@@ -10,7 +30,7 @@ body{
     background:  #E5E5E5;
 }
 
-/********************** header section ********************* */
+/* header section */
 #header {
     width:100%;
     height:97vh;
@@ -21,7 +41,7 @@ body{
     
 }
 
-/**********************  navbar style ********************* */
+/* navbar style */
 .navbar{
     width: 100%;
     height:auto;
@@ -49,6 +69,7 @@ body{
     float: left;
 }
 .navbar-item{
+    /* width: 100%; */
     padding:10px ;
 }
 .navbar-item:hover{
@@ -66,13 +87,15 @@ body{
     font-size: 20px;
     font-weight: 500;
     line-height: 9px;
+    letter-spacing: 0px;
+    /* text-align: right; */
     padding: 20px;
    
 
 
 }
 
-/**********************   navbar items list for small devices ********************* */
+/*  navbar items list for small devices */
 #navbar-items-list-for-small-devices{
   
     list-style: none;
@@ -121,7 +144,10 @@ body{
     color: rgb(100, 95, 95);
     padding-top: 3px;
 }
-
+/* #hamburg a{
+    color: rgb(100, 95, 95);
+    padding-top: 3px;
+} */
 #hamburg a i,#hamburg-close a i{
     border: 2px solid rgb(118, 118, 121);
     background-color: rgba(231, 215, 215, 0.473);
@@ -202,6 +228,9 @@ body{
 #profile-image{
     width: 250px;
     height: 250px;
+    /* max-width: 243px;
+    max-height: 243px;; */
+
     background-image: url('../assets/image/20230623-MIV00885.jpg');
     background-size: cover;
     border: 1px solid rgb(195, 195, 195);
@@ -217,27 +246,14 @@ body{
 }
 
 
-/**********************  main content ********************* */
+/* main content */
 main{
     width: 100%;
     padding: 10px 0;
 }
 
-.section-heading {
-    font-family: 'Heebo';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 60px;
-    /* identical to box height, or 273% */
-    /* Dark Color */
 
-    color: #21243D;
-    padding-bottom: 20px 0 0;
-}
-
-
-/**********************  skills section ********************* */
+/* skills section */
 #skills{
    width: 100%;
    background-color: #EDF7FA;
@@ -258,17 +274,14 @@ main{
 }
 .skills-badges{
     width: 100px;
-    margin: 20px;
     margin-bottom: 30px;
-    border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
-/**********************  featured work ********************* */
+/* featured work */
 #works{
     width: 75%;
     margin: auto;
-    margin-top: 20px;
 }
 #work-heading{
     font-family: 'Heebo';
@@ -327,11 +340,13 @@ main{
 /* featured work detail container styles  */
 .project-details{
     padding: 0 30px;
+    /* 20px */
 }
 .project-heading{
     font-family: Heebo;
     font-size: 30px;
     font-weight: 700;
+    /* line-height: 44px; */
     letter-spacing: 0px;
     text-align: left;
 
@@ -363,27 +378,33 @@ color: #8695A4;
     color: white;
     padding: 8px 10px;
     padding-left: 0;
-   
+    /* margin-right: 10px; */
 }
+/* span:nth-child(1).skills-required{background-color: #FF6464;box-shadow: inset 0 0 2px 2px rgb(190, 81, 81);}
+span:nth-child(2).skills-required{background-color: #64acff;box-shadow: inset 0 0 2px 2px #497cb8;}
+span:nth-child(3).skills-required{background-color: #ffdd64;box-shadow: inset 0 0 2px 2px #b59d47;}
+span:nth-child(4).skills-required{ background: #0a59f8;box-shadow: inset 0 0 2px 2px  #073289} */
 
 .skills-icon{
     width:40px;
 }
 .project-about{
-    font-family: 'Heebo';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    /* text-align: justify; */
 
-    /* Dark Color */
+font-family: 'Heebo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
 
-    color: #21243D;
+/* Dark Color */
+
+color: #21243D;
 
 }
 
 
-/**********************  footer ********************* */
+/* footer */
 footer{
     text-align: center;
     padding: 20px;
@@ -434,7 +455,7 @@ footer{
 
 
 
-/**********************  media queries ********************* */
+/* media queries */
 @media screen and (max-width:1200px) {
     
     #header{
@@ -525,3 +546,16 @@ footer{
     
 }
     
+.section-heading {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 60px;
+    /* identical to box height, or 273% */
+    /* Dark Color */
+
+    color: #21243D;
+    padding-bottom: 20px 0 0;
+}
+
