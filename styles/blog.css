@@ -39,7 +39,9 @@
     line-height: 44px;
     color: #21243D;
 }
-
+#contact-me{
+    width: 700px;
+}
 /* media queries for blog container */
 @media screen and (max-width:700px) {
    #main-content{
