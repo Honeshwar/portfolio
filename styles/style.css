@@ -197,10 +197,11 @@ body{
     position:relative;
     top: 5px;
     left:30px;
+    border-radius: 5px;
 
 }
 #download-resume-container a:hover{
-    box-shadow: 0 5px 5px 2px #272727;
+    box-shadow:inset 0 0 15px 10px  #f75656;
 }
 
 
