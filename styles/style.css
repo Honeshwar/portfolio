@@ -263,12 +263,17 @@ main{
     border-radius: 20px;
     padding: 10px;
 }
+.skills-badges:hover {
+    transform: scale(1.1);
+    transition: transform .2s ease-in;
+    box-shadow: 0 0 5px 2px black;
+}
 
 /**********************  featured work ********************* */
 #works{
     width: 75%;
     margin: auto;
-    margin-top: 20px;
+    margin-block: 20px;
 }
 #work-heading{
     font-family: 'Heebo';
@@ -433,6 +438,82 @@ footer{
 .phone{color:#055364}
 
 
+/* Contact form style */
+
+.container {
+    margin:auto;
+    background-color:#fff;
+    width: 75%;
+    height: 450px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    line-height: 1.5;
+    box-shadow:0 0 10px 3px rgba(0, 0, 0, 0.185);
+}
+    
+img {
+    width: 60%;
+    /* height: 400px; */
+    object-fit: cover;
+    object-position: center;
+    filter: invert(0);
+}
+
+.container-text {
+    padding: 10px 40px 10px 10px;
+}
+h2 {
+    font-size: 1.9rem;
+    color: #21243D;
+    text-align:center;
+}
+
+p {
+    font-size: 14px;
+    color: #3B4169;
+    margin: 10px 0;
+}
+
+input,
+button ,textarea{
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 3px;
+}
+
+input,textarea {
+    border: 2px solid #DADDEC;
+    margin: 5px 0 10px;
+    font-size: 1rem;
+    color: #656880;
+}
+
+button {
+    background-image: linear-gradient(to right, #89CAFF, #6589FF);
+    display: block;
+    color:#fff;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #89caff94;
+    transition: box-shadow .3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+span {
+    display: block;
+    text-align: center;
+    margin: 20px 0 0;
+    color: #BABDCB;
+    font-size: 12px;
+}
+    
+  
 
 /**********************  media queries ********************* */
 @media screen and (max-width:1200px) {
