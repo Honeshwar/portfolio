@@ -58,7 +58,6 @@ body{
     border-radius: 10px;
 }
 .navbar-item-link{
-    color: rgb(14, 11, 11);
     color: #21243D;
     text-decoration: none;
 
@@ -449,6 +448,7 @@ footer{
 /* Contact form style */
 
 .container {
+    border-radius: 5px;
     margin:auto;
     background-color:transparent;
     width: 75%;
@@ -456,19 +456,21 @@ footer{
     position: relative;
     line-height: 1.5;
     box-shadow:0 0 10px 3px rgba(0, 0, 0, 0.185);
-    /* border: solid black; */
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center ;
-    padding-block: 20px 30px;
+    padding-block: 0px 45px;
     background-image: url("https://preview.colorlib.com/theme/bootstrap/contact-form-16/images/undraw-contact.svg");
 }
 .container  h2 {
     font-size: 2.4rem;
     color: #21243D;
     text-align:center;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    /* border: solid; */
 
 }
 
@@ -524,9 +526,35 @@ footer{
     color: #BABDCB;
     font-size: 12px;
 }
-    
-  
 
+/* scroll top / bottom styles */
+#navigate-to-top-bottom{
+    position: fixed; 
+    top:30vh;
+}
+.scroll-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #ff64648a;
+    margin-bottom: 10px;
+
+}
+.scroll-btn a{
+    width: 100%;
+    height: 100%;
+    text-decoration-line: none;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-shadow: 0 0 1px black;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
 /**********************  media queries ********************* */
 @media screen and (max-width:1200px) {
     
