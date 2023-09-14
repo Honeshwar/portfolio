@@ -41,13 +41,15 @@
 }
 #contact-me{
     width: 700px;
+   
 }
 /* media queries for blog container */
 @media screen and (max-width:700px) {
-   #main-content{
+   #main-content,#contact-me{
         width: 400px;
         margin: auto;
     }
+
 }
 
 
