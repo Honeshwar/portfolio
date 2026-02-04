@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Send, Loader2, CheckCircle, AlertCircle } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+import { useForm, ValidationError } from '@formspree/react';
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -18,6 +18,15 @@ interface ContactFormProps {
 }
 
 const ContactForm = ({ isInView }: ContactFormProps) => {
+  const [formBeeState, formBeeSubmitHandler] = useForm(import.meta.env.VITE_FORMBEE_API_KEY,{
+  data: {
+    subject: 'Someone contacted you from your portfolio site, contact form.',
+    pageTitle: function() {
+      // This function will be evaluated at submission time
+      return document.title;
+    }
+  }
+});
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -58,11 +67,15 @@ const ContactForm = ({ isInView }: ContactFormProps) => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: formData,
-      });
-
-      if (error) throw error;
+      // const { error } = await supabase.functions.invoke("send-contact-email", {
+      //   body: formData,
+      // });
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("subject", formData.subject);
+      formDataToSend.append("message", formData.message);
+      await formBeeSubmitHandler(formDataToSend);
 
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -73,6 +86,11 @@ const ContactForm = ({ isInView }: ContactFormProps) => {
       setIsSubmitting(false);
     }
   };
+
+  if (formBeeState.errors) {
+    
+  }
+
 
   return (
     <motion.form
@@ -179,6 +197,22 @@ const ContactForm = ({ isInView }: ContactFormProps) => {
           <span>Failed to send message. Please try again or email directly.</span>
         </motion.div>
       )}
+
+      {
+        formBeeState.errors && (
+          <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex items-center gap-2 text-destructive bg-destructive/10 px-4 py-3 rounded-lg"
+        >
+          <AlertCircle size={20} />
+          <ValidationError
+          field="paymentMethod"
+          errors={formBeeState.errors}
+        />
+        </motion.div>
+        )
+      }
 
       <button
         type="submit"
