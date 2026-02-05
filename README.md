@@ -5,9 +5,9 @@ Personal portfolio website showcasing my work, skills, and experience as a **Fro
 🔗 **Live Website:**  
 https://honeshwarthakur.vercel.app/
 
----
 
-### 📸 Screenshot
+
+## 📸 Screenshot
 
 <p align="center">
   <img src="./public/screenshots/1.png" alt="Portfolio Screenshot" width="800"/>
@@ -27,9 +27,9 @@ https://honeshwarthakur.vercel.app/
 
 > Clean, modern UI with smooth navigation and responsive design.
 
----
 
-### 👨‍💻 About the Project
+
+## 👨‍💻 About the Project
 
 This portfolio is designed to:
 - Highlight my **frontend development skills**
@@ -37,9 +37,9 @@ This portfolio is designed to:
 - Make it easy for **recruiters & startups** to contact me
 - Represent my work ethic, design sense, and coding style
 
----
 
-### ✨ Features
+
+## ✨ Features
 
 - ⚡ Fast and responsive UI
 - 📱 Mobile-first design
@@ -48,9 +48,9 @@ This portfolio is designed to:
 - 📬 Contact section
 - 🌙 Clean, minimal design
 
----
 
-### 🛠 Tech Stack
+
+## 🛠 Tech Stack
 
 - **React 18 + TypeScript** (Vite)
 - **Tailwind CSS**, **Shadcn/UI**, **Radix UI**
@@ -60,9 +60,9 @@ This portfolio is designed to:
 - **Recharts**, **Lucide Icons**
 - **Vitest**, **ESLint**, **PostCSS**
 
----
 
-### 💡 Why This Stack?
+
+## 💡 Why This Stack?
 
 This stack focuses on **performance, scalability, and developer experience**:
 - Vite for lightning-fast builds
@@ -71,12 +71,13 @@ This stack focuses on **performance, scalability, and developer experience**:
 - Scalable data fetching with React Query
 - Supabase for rapid backend development
 
----
 
-### 🚀 Getting Started (Local Setup)
+
+## 🚀 Getting Started (Local Setup)
 
 ```bash
 git clone https://github.com/Honeshwar/portfolio.git
 cd portfolio
 npm install
 npm run dev
+
